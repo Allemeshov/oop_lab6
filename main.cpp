@@ -173,7 +173,7 @@ void filterCitizens(vector<Citizen> *citizens) {
     auto result = new vector<Citizen>();
     vector<Citizen>::iterator i;
     for (i = citizens->begin(); i != citizens->end(); ++i) {
-        if (isYoung(*i) && i->sex_i() == FEMALE)
+        if (isYoung(*i) || i->sex_i() == FEMALE)
             result->push_back(*i);
     }
 
